@@ -1,6 +1,6 @@
 .locations-section {
-  background: #f8f6f1;
-  color: #29251f;
+  background: #f4eee1;
+  color: #333333;
   font-family: Arial, sans-serif;
 }
 
@@ -57,7 +57,7 @@
 
 .locations-eyebrow {
   margin: 0 0 9px;
-  color: #9e3f3f;
+  color: #666666;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2.1px;
@@ -98,7 +98,7 @@
 
 .location-card>h3 {
   margin: 0 0 28px;
-  color: #9e3f3f;
+  color: #333333;
   font-family: Georgia, serif;
   font-size: 29px;
   font-weight: 500;
@@ -116,14 +116,14 @@
   height: 25px;
   margin-top: 1px;
   fill: none;
-  stroke: #9e3f3f;
+  stroke: #a98b42;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.7;
 }
 
 .location-detail:first-of-type svg circle:last-child {
-  fill: #9e3f3f;
+  fill: #a98b42;
   stroke: none;
 }
 
@@ -146,7 +146,7 @@
 .location-detail a {
   display: inline-block;
   margin-top: 12px;
-  color: #9e3f3f;
+  color: #333333;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.1px;

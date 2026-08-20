@@ -1,0 +1,64 @@
+.happy-section {
+    background: #333;
+    color: #f4eee1
+}
+
+.happy-image {
+    background: linear-gradient(115deg, rgba(51, 51, 51, .1), rgba(51, 51, 51, .38)), url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1300&q=90') center/cover
+}
+
+.happy-copy .section-kicker {
+    color: #e5c77f
+}
+
+.happy-copy h2 {
+    font-size: clamp(54px, 6vw, 80px)
+}
+
+.happy-time {
+    margin: 15px 0 27px;
+    color: #e5c77f;
+    font: 700 12px Arial, sans-serif;
+    letter-spacing: 1.6px;
+    text-transform: uppercase
+}
+
+.happy-offers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 470px
+}
+
+.happy-offers p {
+    margin: 0;
+    padding-top: 13px;
+    border-top: 1px solid rgba(244, 238, 225, .28)
+}
+
+.happy-offers b {
+    display: block;
+    color: #e5c77f;
+    font: 500 28px Georgia, serif
+}
+
+.happy-offers span {
+    display: block;
+    margin-top: 7px;
+    color: #ddd4c6;
+    font: 14px/1.45 Arial, sans-serif
+}
+
+.happy-copy a {
+    color: #f4eee1
+}
+
+.happy-copy a span {
+    color: #e5c77f
+}
+
+@media(max-width:480px) {
+    .happy-offers {
+        grid-template-columns: 1fr
+    }
+}

@@ -1,0 +1,105 @@
+.chefs-section,
+.recommendations-section {
+    padding: clamp(65px, 8vw, 115px) max(24px, 7vw);
+    background: #f4eee1;
+    color: #333
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 42px
+}
+
+.chef-grid,
+.dish-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1240px;
+    margin: auto
+}
+
+.chef-card,
+.dish-card {
+    position: relative;
+    min-height: 430px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid rgba(51, 51, 51, .15);
+    transition: transform .35s ease, box-shadow .35s ease
+}
+
+.chef-card::after,
+.dish-card::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(51, 51, 51, .9), rgba(51, 51, 51, .02) 68%);
+    content: '';
+    opacity: 0;
+    transition: opacity .35s ease
+}
+
+.chef-card:hover,
+.dish-card:hover {
+    z-index: 1;
+    transform: scale(1.035);
+    box-shadow: 0 22px 35px rgba(51, 51, 51, .2)
+}
+
+.chef-card:hover::after,
+.dish-card:hover::after {
+    opacity: 1
+}
+
+.chef-card__info,
+.dish-card__info {
+    position: absolute;
+    right: 26px;
+    bottom: 24px;
+    left: 26px;
+    z-index: 1;
+    color: #f4eee1;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform .35s ease, opacity .35s ease
+}
+
+.chef-card:hover .chef-card__info,
+.dish-card:hover .dish-card__info {
+    transform: translateY(0);
+    opacity: 1
+}
+
+.chef-card__info p,
+.dish-card__info p {
+    margin: 0;
+    color: #e5c77f;
+    font: 700 10px Arial, sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase
+}
+
+.chef-card__info h3,
+.dish-card__info h3 {
+    margin: 8px 0;
+    font: 500 31px Georgia, serif
+}
+
+.chef-card__info span,
+.dish-card__info span {
+    font: 14px/1.45 Arial, sans-serif
+}
+
+@media(max-width:760px) {
+
+    .chef-grid,
+    .dish-grid {
+        grid-template-columns: 1fr
+    }
+
+    .chef-card,
+    .dish-card {
+        min-height: 380px
+    }
+}

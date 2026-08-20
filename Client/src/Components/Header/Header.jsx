@@ -6,6 +6,8 @@ import {
     FaSearch,
     FaShoppingCart
 } from 'react-icons/fa';
+import logoBlanco from '../../assets/Image/LogoBlanco.png';
+import logoColor from '../../assets/Image/Logo.png';
 
 import './Header.css';
 
@@ -37,8 +39,16 @@ const Header = () => {
 
                 <div className="header-inner">
 
-                    {/* MENÚ IZQUIERDO */}
-                    <nav className="nav-group nav-left">
+                    {/* LOGO */}
+                    <div className="header-logo">
+                        <Link to="/" aria-label="Punto 29 - Inicio">
+                            <img className="logo-white" src={logoBlanco} alt="Punto 29" />
+                            <img className="logo-color" src={logoColor} alt="" aria-hidden="true" />
+                        </Link>
+                    </div>
+
+                    {/* NAVEGACIÓN CENTRAL */}
+                    <nav className="nav-group nav-center">
 
                         <Link to="/historia">
                             HISTORIA
@@ -48,38 +58,18 @@ const Header = () => {
                             CARTA
                         </Link>
 
-                    </nav>
-
-                    {/* LOGO */}
-                    <div className="header-logo">
-
-                        <Link to="/">
-                            <span className="logo-main">
-                                punto 29
-                            </span>
-
-                            <span className="logo-sub">
-                                RESTAURANTE
-                            </span>
+                        <Link to="/reserva">
+                            RESERVA
                         </Link>
 
-                    </div>
+                        <Link to="/trabaja-con-nosotros">
+                            TRABAJA CON NOSOTROS
+                        </Link>
 
-                    {/* MENÚ DERECHO */}
+                    </nav>
+
+                    {/* ACCIONES A LA DERECHA */}
                     <div className="header-right">
-                        <nav className="nav-group nav-right">
-
-                            <Link to="/reserva">
-                                RESERVA
-                            </Link>
-
-                            <Link to="/trabaja-con-nosotros">
-                                TRABAJA CON NOSOTROS
-                            </Link>
-
-                        </nav>
-
-                        {/* ICONOS */}
                         <div className="header-actions">
 
                             <a
@@ -98,12 +88,12 @@ const Header = () => {
                                 <FaUser />
                             </Link>
 
-                            {/*   <Link
+                            <Link
                                 to="/carrito"
                                 title="Carrito"
                             >
                                 <FaShoppingCart />
-                            </Link> */}
+                            </Link>
 
                         </div>
 

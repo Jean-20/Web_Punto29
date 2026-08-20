@@ -1,0 +1,576 @@
+/* ================================
+   HERO PRINCIPAL
+================================ */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+    overflow: hidden;
+    background: #000;
+}
+
+
+/* ================================
+   VIDEO
+================================ */
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: 0;
+}
+
+
+/* ================================
+   CAPA SOBRE EL VIDEO
+================================ */
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header-container {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 105px;
+
+    z-index: 10;
+
+    background: transparent;
+
+    transition:
+        background-color 0.35s ease,
+        box-shadow 0.35s ease;
+
+    border-bottom: 1px solid transparent;
+}
+
+
+/* ================================
+   EFECTO HOVER
+================================ */
+
+.header-container:hover {
+    background: #ffffff;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* ================================
+   CONTENEDOR INTERNO
+================================ */
+
+.header-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 0 55px;
+
+    gap: 42px;
+}
+
+.header-right {
+    position: static;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 42px;
+}
+
+
+/* ================================
+   BUSCADOR
+================================ */
+
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.search-bar {
+    width: 260px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+
+    padding: 8px 0;
+
+    transition: border-color 0.35s ease;
+}
+
+.search-icon {
+    font-size: 17px;
+
+    color: white;
+
+    transition: color 0.35s ease;
+}
+
+.search-bar input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-family: Georgia, serif;
+    font-style: italic;
+
+    font-size: 17px;
+
+    color: white;
+
+    transition: color 0.35s ease;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+
+/* HOVER DEL HEADER */
+
+.header-container:hover .search-bar {
+    border-color: #777;
+}
+
+.header-container:hover .search-icon {
+    color: #777;
+}
+
+.header-container:hover .search-bar input {
+    color: #333;
+}
+
+.header-container:hover .search-bar input::placeholder {
+    color: #777;
+}
+
+
+/* ================================
+   NAVEGACIÓN
+================================ */
+
+.nav-group {
+    display: flex;
+
+    align-items: center;
+
+    gap: 38px;
+
+    white-space: nowrap;
+}
+
+.nav-left {
+    position: static;
+    justify-content: flex-start;
+}
+
+.nav-group a {
+    position: relative;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    transition: color 0.35s ease;
+}
+
+
+/* HOVER HEADER */
+
+.header-container:hover .nav-group a {
+    color: #555;
+}
+
+
+/* ================================
+   EFECTO DE LÍNEA
+================================ */
+
+.nav-group a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 1px;
+
+    background: #9e3f3f;
+
+    transition: width 0.3s ease;
+}
+
+.nav-group a:hover::after {
+    width: 100%;
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.header-logo {
+    text-align: center;
+
+    min-width: 180px;
+}
+
+.header-logo a {
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.logo-main {
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 39px;
+
+    font-weight: bold;
+
+    font-style: italic;
+
+    line-height: 35px;
+
+    transition: color 0.35s ease;
+}
+
+.logo-sub {
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-top: 5px;
+
+    transition: color 0.35s ease;
+}
+
+
+/* LOGO AL HACER HOVER */
+
+.header-container:hover .logo-main {
+    color: #9e3f3f;
+}
+
+.header-container:hover .logo-sub {
+    color: #777;
+}
+
+
+/* ================================
+   ICONOS DERECHA
+================================ */
+
+.header-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+.header-actions a {
+    color: white;
+
+    font-size: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    transition:
+        color 0.35s ease,
+        transform 0.25s ease;
+}
+
+
+/* HOVER HEADER */
+
+.header-container:hover .header-actions a {
+    color: #777;
+}
+
+.header-actions a:hover {
+    transform: scale(1.15);
+    color: #9e3f3f !important;
+}
+
+
+/* ================================
+   HERO CONTENT
+================================ */
+
+.hero-content {
+    position: relative;
+
+    z-index: 3;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 7%;
+
+    pointer-events: none;
+}
+
+.hero-text {
+    margin-top: 100px;
+
+    color: white;
+}
+
+.hero-text h2 {
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(40px, 5vw, 78px);
+
+    line-height: 0.95;
+
+    margin: 0 0 20px;
+
+    font-weight: 700;
+
+    letter-spacing: -2px;
+}
+
+.hero-text p {
+    font-family: Georgia, serif;
+
+    font-style: italic;
+
+    font-size: 25px;
+
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    pointer-events: auto;
+
+    color: white;
+
+    border: 1px solid white;
+
+    padding: 14px 30px;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    pointer-events: auto;
+}
+
+.reserve-button {
+    color: #111;
+    background: white;
+    border-color: white;
+}
+
+.reserve-button:hover {
+    color: #111;
+    background: white;
+    border-color: white;
+}
+
+.hero-button:hover {
+    background: white;
+
+    color: #222;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1200px) {
+
+    .header-inner {
+        padding: 0 30px;
+
+        gap: 20px;
+    }
+
+    .search-bar {
+        width: 200px;
+    }
+
+    .nav-group,
+    .header-right {
+        gap: 20px;
+    }
+
+    .nav-group a {
+        font-size: 13px;
+    }
+
+    .logo-main {
+        font-size: 32px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .header-container {
+        height: 80px;
+    }
+
+    .header-inner {
+        display: flex;
+
+        justify-content: space-between;
+
+        padding: 0 25px;
+    }
+
+    .header-left,
+    .nav-left,
+    .nav-right {
+        display: none;
+    }
+
+    .header-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+
+    .header-right {
+        position: static;
+    }
+
+    .header-actions {
+        gap: 18px;
+    }
+
+    .logo-main {
+        font-size: 30px;
+    }
+
+    .hero-text {
+        padding-right: 30px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .header-inner {
+        padding: 0 18px;
+    }
+
+    .header-actions {
+        gap: 14px;
+    }
+
+    .header-actions a {
+        font-size: 17px;
+    }
+
+    .logo-main {
+        font-size: 27px;
+    }
+
+    .hero-text h2 {
+        font-size: 42px;
+    }
+
+    .hero-text p {
+        font-size: 19px;
+    }
+
+    .hero-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        z-index: 0;
+    }
+}

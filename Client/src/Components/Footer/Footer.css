@@ -1,0 +1,172 @@
+.footer {
+    background:
+        linear-gradient(rgba(35, 30, 25, 0.88), rgba(35, 30, 25, 0.88)),
+        url('/images/footer-bg.jpg');
+
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 45px 8% 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.1fr 1.3fr 1.3fr 1.3fr;
+    gap: 50px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h3 {
+    font-size: 15px;
+    margin: 0 0 7px;
+    font-weight: bold;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 22px;
+}
+
+.footer-column a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 6px;
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    opacity: 0.65;
+}
+
+.footer-title {
+    margin-top: 20px !important;
+}
+
+/* REDES */
+.social-icons {
+    display: flex;
+    gap: 22px;
+    margin-bottom: 40px;
+}
+
+.social-icons a {
+    font-size: 22px;
+    margin: 0;
+    color: white;
+}
+
+/* MARCA */
+.footer-brand {
+    text-align: center;
+}
+
+.footer-brand h2 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.footer-brand p {
+    margin-top: 5px;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+/* LOGO INFERIOR */
+.footer-logo {
+    max-width: 1200px;
+    margin: 60px auto 30px;
+}
+
+.footer-logo h2 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: normal;
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+.footer-logo span {
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-left: 3px;
+}
+
+.footer-line {
+    max-width: 1200px;
+    margin: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 35px 25px 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-logo h2 {
+        font-size: 32px;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+    }
+
+    .footer-bottom div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-bottom a {
+        margin-left: 0;
+    }
+}
